@@ -224,7 +224,11 @@ console.log("addThenSubtract:", addThenSubtract(bango3, bango4, bango5));
  * This function will multiply the first two parameters together. Then with the product of that operation, divide it from the third parameter. PLEASE USE YOUR PREVIOUS FUNCTIONS FOR THIS EXERCISE. 
  * Console.log your result.
 */ 
-
+function multiplyThenDivide(num1, num2, num3){
+	var product = multiply(num1, num2);
+	return divide(product, num3);
+}
+console.log("multiplyThenDivide:", multiplyThenDivide(bango3, bango4, bango5))
 
 
 /*
