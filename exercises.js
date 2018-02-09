@@ -242,8 +242,11 @@ console.log("multiplyThenDivide:", multiplyThenDivide(bango3, bango4, bango5))
  *
  *  This function `returns` back a string which represents someone's full name. Invoke this function by passing in your first  and last name into the function. Store the return value into a variable named `myFullName` and console.log this variable to show your result.
 */
-
-
+function createFullName(firstName, lastName){
+	return firstName + " " +lastName;
+}
+var myFullName = createFullName("Yao", "Zaa");
+console.log(myFullName);
 
 /*
  * #13 
@@ -258,8 +261,10 @@ console.log("multiplyThenDivide:", multiplyThenDivide(bango3, bango4, bango5))
  * This function will use the previous `createFullName` function above to create a message. For example, if you invoked the function like this: eatFood("Biggie", "Smalls", "Won Ton Soup"); it will display the message "Biggie Smalls eats Won Ton Soup everyday for breakfast."
  * Console.log your result.
  */
-
-
+function eatFood(firstName, lastName, food){
+	return createFullName(firstName, lastName) + " eats" + food + " everday for breakfast.";
+}
+console.log(eatFood("Christine", "Santos", " Mabutofu Curry"));
 
 /************** ENGAGE HYPERDRIVE **************/
 /* No more training wheels! For the exercises #14-18, use the experience you've
@@ -273,8 +278,13 @@ console.log("multiplyThenDivide:", multiplyThenDivide(bango3, bango4, bango5))
  * Create a function that will take in a parameter named `inches`. This function will convert inches to centimeters(cm).
  * Console.log your result. 
 */
-
-
+function shoeSize(inches){
+	var cm = inches * 5;
+	return cm
+}
+var inches = 11.5;
+console.log(shoeSize(inches));
+console.log(shoeSize(5));
 
 /*
  * #15
@@ -285,6 +295,12 @@ console.log("multiplyThenDivide:", multiplyThenDivide(bango3, bango4, bango5))
  * Example input: "believe you can and you're halfway there."
  * Example output: "BELIEVE YOU CAN AND YOU'RE HALFWAY THERE."
 */
+ var believe = "Believe you can and you're halfway there.";
+
+ function allCaps(str){
+ 	return str.toUpperCase();
+ }
+console.log(allCaps(believe));
  
 
 
@@ -295,8 +311,10 @@ console.log("multiplyThenDivide:", multiplyThenDivide(bango3, bango4, bango5))
  * This function will capitalize only the first letter in the variable phase above. 
  * Console.log your result.
 */
-
-
+function oneCap(str){
+	return str[0].toUpperCase() + str.slice(1);
+}
+console.log(oneCap(believe));
 
 /*
  * #17
@@ -308,16 +326,30 @@ console.log("multiplyThenDivide:", multiplyThenDivide(bango3, bango4, bango5))
  * Call this function and pass in a number value.
  * Store the return value to a variable named `canDrink`. Console.log your result.
  */
-
-
+function verifyDrinkingAge(age){
+	if(age >= 21){
+		return true
+	}else{
+		return false
+	}
+}
+var canDrink = verifyDrinkingAge(21);
+console.log(canDrink);
 
 /**
  * #18
  * Function - throwParty
  * Create a function named throwParty. This function will check the value stored in the `canDrink` variable in the previous exercise. If the value is true, it will return the message "Cheee Hoo! We going to da party!" If false, then it will return the message "Meh, see you at Starbucks." Store the return value to a variable named `canParty`. Console.log your result.
  */
-
-
+function throwParty(){
+	if(canDrink === true){
+		return "Let's party like a rockstar!";
+	}else{
+		return "Play bingo with Grandma Georgina!"
+	}
+}
+var canParty = throwParty();
+console.log(canParty);
 
 
 
