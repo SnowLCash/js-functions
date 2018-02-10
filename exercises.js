@@ -160,7 +160,7 @@ function checkProduct(){
 	return sum * product;
 }
 var showResult = checkProduct();
-console.log("showResult: " , showResult);
+console.log("ShowResult: " , showResult);
 
 /*
  * #9
@@ -262,7 +262,7 @@ console.log(myFullName);
  * Console.log your result.
  */
 function eatFood(firstName, lastName, food){
-	return createFullName(firstName, lastName) + " eats" + food + " everday for breakfast.";
+	return createFullName(firstName, lastName) + " eats" + food + " everyday for breakfast.";
 }
 console.log(eatFood("Christine", "Santos", " Mabutofu Curry"));
 
@@ -351,6 +351,9 @@ function throwParty(){
 var canParty = throwParty();
 console.log(canParty);
 
-
-
+function greet(greeting, name){
+	return greeting + ", " + name;
+}
+var message = greet("hello", "Meliodas");
+console.log(message);
 
